@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #F7F2E7;
+    --second-color: #FFFDF8;
+    --accent-color: #0F6B4F;
+    --border-color: #D7CBB6;
+    --fraunces: 'Fraunces', sans-serif;
+    --font-color-logo: #13231B;
+    --public-sans: 'Public Sans', sans-serif;
+    --font-color-nav-light: #FFFFFF;
+    --font-color-nav-dark: #4C5B52;
+    --ibm-plex-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    height: 68px;
+    background: var(--second-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > div:first-of-type > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--fraunces);
+    color: var(--font-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav > div:nth-of-type(2) > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+}
+
+nav > div:nth-of-type(2) > ul > li {
+    border-radius: 999px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--accent-color); */
+}
+
+nav > div:nth-of-type(2) > ul > li > a {
+    color: var(--font-color-nav-dark);
+    font-family: var(--public-sans);
+}
+
+nav > div:last-of-type {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-signin, .btn-report {
+    border: none;
+    border-radius: 999px;
+    font-family: var(--public-sans);
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+}
+.btn-signin {
+    background-color: var(--font-color-nav-light);
+    color: var(--font-color-nav-dark);
+}
+.btn-report {
+    background-color: var(--accent-color);
+    color: var(--font-color-nav-light);
+}
