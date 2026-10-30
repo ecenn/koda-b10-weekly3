@@ -6,11 +6,11 @@
     --accent-color: #0F6B4F;
     --border-color: #D7CBB6;
     --fraunces: 'Fraunces', sans-serif;
-    --font-color-logo: #13231B;
     --public-sans: 'Public Sans', sans-serif;
-    --font-color-nav-light: #FFFFFF;
-    --font-color-nav-dark: #4C5B52;
     --ibm-plex-mono: 'IBM Plex Mono', monospace;
+    --font-color-dark: #13231B;
+    --font-color-semidark: #4C5B52;
+    --font-color-light: #FFFFFF;
 }
 
 body {
@@ -19,21 +19,24 @@ body {
     background: var(--primary-color);
 }
 
+/* HEADER */
+
 a {
     text-decoration: none;
 }
 
 header {
     display: flex;
+    justify-content: center;
     height: 68px;
     background: var(--second-color);
     border-bottom: 1px solid var(--border-color);
 }
 
 nav {
+    width: 80%;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -44,9 +47,10 @@ nav > div:first-of-type > a {
     align-items: center;
     gap: 8px;
     font-family: var(--fraunces);
-    color: var(--font-color);
+    color: var(--font-color-dark);
     font-size: 20px;
     font-weight: 700;
+    font-variation-settings: "SOFT" 0, "WONK" 1;
 }
 
 nav > div:nth-of-type(2) > ul {
@@ -70,7 +74,7 @@ nav > div:nth-of-type(2) > ul > li {
 }
 
 nav > div:nth-of-type(2) > ul > li > a {
-    color: var(--font-color-nav-dark);
+    color: var(--font-color-semidark);
     font-family: var(--public-sans);
 }
 
@@ -79,13 +83,10 @@ nav > div:last-of-type {
     gap: 8px;
 }
 
-.btn-signin, .btn-report {
+.btn {
     border: none;
     border-radius: 999px;
     font-family: var(--public-sans);
-    font-size: 12px;
-    width: 90px;
-    height: 30px;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -93,10 +94,99 @@ nav > div:last-of-type {
     padding: 8px;
 }
 .btn-signin {
-    background-color: var(--font-color-nav-light);
-    color: var(--font-color-nav-dark);
+    width: 90px;
+    height: 30px;
+    background-color: var(--font-color-light);
+    color: var(--font-color-semidark);
+    font-size: 12px;
 }
 .btn-report {
+    width: 90px;
+    height: 30px;
     background-color: var(--accent-color);
-    color: var(--font-color-nav-light);
+    color: var(--font-color-light);
+    font-size: 12px;
 }
+
+/* MAIN - LANDING PAGE */
+
+main {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    width: 80%;
+    margin: 40px auto 0;
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main > div > h1:first-of-type {
+    margin: 0;
+    width: 52%;
+    font-family: var(--fraunces);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 51.91px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+}
+
+main > div > p:first-of-type {
+    margin: 0;
+    width: 44%;
+    font-family: var(--public-sans);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 28.05px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+}
+
+main > div > div:first-of-type {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+main > div > div:first-of-type > button {
+    padding: 16px 24px;
+    font-family: var(--public-sans);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-main-dark {
+    background-color: var(--accent-color);
+    color: var(--font-color-light);
+}
+
+.btn-main-light {
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+}
+
+
+.stats {
+    display: flex;
+    gap: 8px;
+    font-family: var(--ibm-plex-mono);
+    font-size: 12px;
+    color: var(--font-color-semidark);
+}
+
+.stats > p > span {
+    font-weight: 600;
+    font-style: SemiBold;
+}
+
