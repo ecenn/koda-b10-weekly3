@@ -410,3 +410,108 @@ main > div > div:first-of-type > button {
     object-fit: cover;
     overflow: hidden;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+    margin-top: 140px;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 48px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 28px;
+}
+
+.footer-content > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+}
+
+.footer-content > div:first-of-type > p:first-of-type {
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+}
+
+.footer-content > div:first-of-type > p {
+    font-family: var(--public-sans);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+}
+
+.footer-content > div:first-of-type > p:last-of-type {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #A33F31;
+}
+
+.footer-link-container {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--ibm-plex-mono);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #0F6B4F;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+    text-transform: initial;
+}
+
+.footer-link > li > a {
+    font-family: var(--public-sans);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+    list-style: none;
+
+}
+
+.copyright {
+    width: 80%;
+    margin: 0 auto;
+    padding: 24px 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--ibm-plex-mono);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 17.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+}
