@@ -20,6 +20,11 @@ body {
     background: var(--primary-color);
 }
 
+.dim {
+    background-color: #13231B;
+    opacity: 50%;
+}
+
 /* HEADER */
 
 a {
@@ -71,7 +76,21 @@ nav > div:nth-of-type(2) > ul > li {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--accent-color); */
+}
+
+.nav-click {
+    background-color: var(--accent-color);
+}
+
+nav > div:nth-of-type(2) > ul > .nav-click > a {
+    font-family: var(--public-sans);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-light);
 }
 
 nav > div:nth-of-type(2) > ul > li > a {
@@ -514,4 +533,88 @@ footer {
     letter-spacing: 0%;
     vertical-align: middle;
     color: #84928A;
+}
+
+/* LIVE FEED */
+
+.title-live {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.title-live > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title-live > div:first-of-type > p:first-of-type {
+    font-family: var(--ibm-plex-mono);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #84928A;
+}
+
+.title-live > div:first-of-type > h2 {
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 36px;
+    line-height: 39.42px;
+    letter-spacing: -0.88px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+    margin: 0;
+}
+
+.title-live > div:first-of-type > p:nth-of-type(2) {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 22.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+    width: 50%;
+}
+
+.title-live > div:last-of-type {
+    background-color: var(--second-color);
+    border: 1px solid #E8E0D1;
+    border-radius: 999px;
+    display: flex;
+}
+
+.title-live > div:last-of-type > button {
+    background-color: transparent;
+    border: none;
+    font-family: var(--public-sans);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    color: var(--font-color-semidark);
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin: 4px 4px 4px 0;
+}
+
+.title-live > div:last-of-type > button:first-of-type {
+    background-color: var(--accent-color);
+    color: var(--font-color-light);
+    border-radius: 999px;
+    margin: 4px 0 4px 4px;
 }
