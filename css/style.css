@@ -10,6 +10,7 @@
     --ibm-plex-mono: 'IBM Plex Mono', monospace;
     --font-color-dark: #13231B;
     --font-color-semidark: #4C5B52;
+    --font-color-semilight: #84928A;
     --font-color-light: #FFFFFF;
 }
 
@@ -193,17 +194,21 @@ main > div > div:first-of-type > button {
 
 .container-card {
     display: flex;
-    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
     gap: 16px;
     border-top: 1px solid var(--border-color);
     padding-top: 28px;
 }
 
+.main-card-1 {
+    flex-direction: row;   
+}
+
 .card {
     background-color: var(--second-color);
     border-radius: 18px;
-    border-color: var(--border-color);
+    border: 1px solid #E8E0D1;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -212,8 +217,6 @@ main > div > div:first-of-type > button {
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0%;
     vertical-align: middle;
     color: var(--font-color-semidark);
 }
@@ -240,7 +243,170 @@ main > div > div:first-of-type > button {
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
-    letter-spacing: -0.25px;
     vertical-align: middle;
     color: var(--font-color-dark);
+}
+
+.report-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.report-flex > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.report-flex > div > h2, p {
+    margin: 0;
+}
+
+.report-flex > div > h2 {
+    font-family: var(--fraunces);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+}
+
+.report-flex > div > p {
+    font-family: var(--public-sans);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    vertical-align: middle;
+    color: var(--font-color-semilight);
+}
+
+.btn-arrow {
+    padding: 0 !important;
+    width: 10%;
+    text-align: left !important;
+    background-color: transparent;
+    border: none;
+    font-family: var(--public-sans);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: middle;
+    color: var(--accent-color);
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.report-card {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 16px;
+}
+
+.report-card > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.report-card > div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-like {
+    padding: 8px 12px;
+    font-family: var(--ibm-plex-mono);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--accent-color);
+}
+
+.report-card > div:last-of-type > .btn-arrow {
+    font-weight: 500;
+    font-style: Medium;
+}
+
+.report-card-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ibm-plex-mono);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semilight);
+}
+
+.status {
+    border: 1px solid;
+    border-radius: 999px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--public-sans);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 12px;
+    line-height: 17.6px;
+    letter-spacing: 0%;
+}
+
+.in-review {
+    background-color: #FBF1D8;
+    border-color: #96680F40;
+    color: #96680F;
+}
+
+.assigned {
+    background-color: #E8F1F5;
+    border-color: #2F607E40;
+    color: #2F607E;
+}
+
+.resolved {
+    background-color: #E5F3EA;
+    border-color: #217A5140;
+    color: #217A51;
+}
+
+.report-card-text {
+    width: 80%;
+    color: var(--font-color-dark);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.report-card-address {
+    font-family: var(--public-sans);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 19.2px;
+    vertical-align: middle;
+}
+
+.report-card-img > img {
+    border: 1px solid #E8E0D1;
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
 }
