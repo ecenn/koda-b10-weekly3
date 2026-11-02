@@ -384,6 +384,18 @@ main > div > div:first-of-type > button {
     letter-spacing: 0%;
 }
 
+.submitted {
+    background-color: #F4EFE4;
+    border-color: #E8E0D1;
+    color: #4C5B52;
+}
+
+.received {
+    background-color: #E6F2EB;
+    border-color: #0F6B4F40;
+    color: #0F6B4F;
+}
+
 .in-review {
     background-color: #FBF1D8;
     border-color: #96680F40;
@@ -396,10 +408,22 @@ main > div > div:first-of-type > button {
     color: #2F607E;
 }
 
+.awaiting {
+    background-color: #FBF1D8;
+    border-color: #96680F40;
+    color: #96680F;
+}
+
 .resolved {
     background-color: #E5F3EA;
     border-color: #217A5140;
     color: #217A51;
+}
+
+.closed {
+    background-color: #F4EFE4;
+    border-color: #E8E0D1;
+    color: #84928A;
 }
 
 .report-card-text {
@@ -846,7 +870,7 @@ footer {
     font-style: SemiBold;
 }
 
-/* TRACK */
+/* TRACK X HELP */
 
 .track-page {
     display: flex;
@@ -854,13 +878,16 @@ footer {
     gap: 40px;
 }
 
-.track-page > div:first-of-type {
-    background-color: var(--second-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
+.help-page {
+    display: flex;
     flex-direction: column;
-    padding: 32px;
-    flex: 3;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.track-page > div:first-of-type,
+.help-page > div:first-of-type {
+    flex-direction: column;
     font-family: Public Sans;
     font-weight: 400;
     font-style: Regular;
@@ -868,9 +895,19 @@ footer {
     line-height: 22.4px;
     letter-spacing: 0%;
     vertical-align: middle;
+    color: var(--font-color-semidark);
 }
 
-.track-page > div:first-of-type > h2 {
+.track-page > div:first-of-type {
+    flex: 3;
+    padding: 32px;
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.track-page > div:first-of-type > h2,
+.help-page > div:first-of-type > h2 {
     margin: 0;
     font-family: Fraunces;
     font-weight: 600;
@@ -882,7 +919,9 @@ footer {
     color: var(--font-color-dark);
 }
 
-.track-page > div:first-of-type > p:first-of-type {
+.track-page > div:first-of-type > p:first-of-type,
+.help-page > div:first-of-type > p:first-of-type,
+.help-page > div:last-of-type > div:first-of-type {
     font-family: IBM Plex Mono;
     font-weight: 500;
     font-style: Medium;
@@ -977,6 +1016,11 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    align-items: start;
+}
+
+.tp-aside > div:first-of-type > img {
+    max-width: 20px;
 }
 
 .tp-aside > div:first-of-type > div {
@@ -1007,4 +1051,148 @@ footer {
     letter-spacing: 0%;
     vertical-align: middle;
     color: var(--accent-color);
+}
+
+.help-page > div:last-of-type {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 32px;
+    width: 100%;
+    align-items: auto;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    padding: 20px;
+    border-radius: 12px;
+    color: #0F6B4F;
+}
+
+.faq-box > div:first-of-type > h5 {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: initial;
+    color: var(--font-color-dark);
+    margin: 0;
+}
+
+.help-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.help-aside > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    padding: 30px 24px 24px 24px;
+    border: 1px solid #E8E0D1;
+    border-radius: 16px;
+    gap: 12px;
+}
+
+.help-aside > div:first-of-type > p:first-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #84928A;
+}
+
+.help-aside > div:first-of-type > h5 {
+    margin: 0;
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16.8px;
+    line-height: 18.82px;
+    letter-spacing: -0.25px;
+    vertical-align: middle;
+    color: #13231B;
+}
+
+.help-aside > div:first-of-type > div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    max-height: 36px;
+    align-items: center;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 11px;
+    line-height: 15.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+}
+
+.emergency {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #A33F31;
+    padding: 32px;
+    background-color: #F9EAE5;
+    border: 1px solid #A33F3147;
+    border-radius: 16px;
+}
+
+.emergency > div:nth-of-type(2) {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #4C5B52;
+}
+
+.emergency > div:last-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #A33F31;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.emergency > div:last-of-type > div {
+    background-color: #FFFDF8;
+    border: 1px solid #A33F3147;
+    border-radius: 999px;
+    padding: 8px 12px;
 }
