@@ -36,7 +36,35 @@
         </nav>
     </header>
     <main>
-
+        <div class="track-page">
+            <div>
+                <p>Citizen Portal</p>
+                <h2>Track your complaint</h2>
+                <p>Enter your official case reference number to view real-time triage progress, inspector assignment, and official replies.</p>
+                <form action="#">
+                    <label for="">Complaint Reference ID *</label>
+                    <input type="text" name="complaint-id" id="complaint-id" placeholder="e.g. CMP-2026-8841">
+                    <label for="">Email address or phone (optional verification)</label>
+                    <input type="text" name="email" id="email" placeholder="citizen@example.com">
+                    <button class="btn btn-main-dark">Lookup report status</button>
+                </form>
+                <div>
+                    Try a sample record: <button>CMP-2026-8841</button> &centerdot; <button>CMP-2026-8794 (Resolved)</button>
+                </div>
+            </div>
+            <div class="tp-aside">
+                <div>
+                    <img src="assets/info-icon.svg" alt="info-icon">
+                    <div>
+                        <p>Your tracking ID was displayed on your confirmation receipt and sent to your registered email address immediately upon intake.</p>
+                        <p>Reports filed anonymously can only be tracked using this unique key; officers cannot retrieve records by name without it.</p>
+                    </div>
+                </div>
+                <div>
+                    Lost your tracking ID? Search recent reports by location →
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">

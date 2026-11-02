@@ -845,3 +845,166 @@ footer {
     font-weight: 600;
     font-style: SemiBold;
 }
+
+/* TRACK */
+
+.track-page {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.track-page > div:first-of-type {
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    flex-direction: column;
+    padding: 32px;
+    flex: 3;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.track-page > div:first-of-type > h2 {
+    margin: 0;
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 35.2px;
+    line-height: 39.42px;
+    letter-spacing: -0.88px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+}
+
+.track-page > div:first-of-type > p:first-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--font-color-semilight);
+    color: var(--font-color-semidark);
+}
+
+.track-page > div:first-of-type > form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.track-page > div:first-of-type > form > input {
+    background-color: var(--second-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.track-page > div:first-of-type > form > input:first-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.track-page > div:first-of-type > form > label {
+    font-family: var(--ibm-plex-mono);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--font-color-semidark);
+}
+
+.track-page > div:first-of-type > form > button {
+    width: 32%;
+    padding: 12px;
+}
+
+.track-page > div:first-of-type > div:last-of-type {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semilight);
+}
+
+.track-page > div:first-of-type > div:last-of-type > button {
+    background-color: transparent;
+    border: none;
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--accent-color);
+}
+
+.tp-aside {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-top: 8px;
+}
+
+.tp-aside > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.tp-aside > div:first-of-type > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tp-aside > div:first-of-type > div > p {
+    padding-bottom: 16px;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+}
+
+.tp-aside > div:last-of-type {
+    padding-top: 20px;
+    border-top: 1px solid #E8E0D1;
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--accent-color);
+}
