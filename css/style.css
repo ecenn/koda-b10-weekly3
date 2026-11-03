@@ -1977,3 +1977,145 @@ nav > div:last-of-type > a:first-of-type > img {
     letter-spacing: 0%;
     color: #4C5B52;
 }
+
+.rp-card-receipt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    border-radius: 16px;
+    padding: 32px 36px;
+}
+
+.rp-card-receipt > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rp-card-receipt > div:first-of-type > div:last-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+}
+
+.rp-card-receipt > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.rp-card-receipt > div:nth-of-type(2) > div:first-of-type {
+    color: #84928A;
+}
+
+.rp-card-receipt > div:nth-of-type(2) > div:last-of-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rp-card-receipt > div:nth-of-type(2) > div:last-of-type > h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 36.8px;
+    letter-spacing: -1.47px;
+    color: #0A5540;
+}
+
+.rp-card-receipt > div:nth-of-type(3) {
+    background-color: #F4EFE4;
+    border: 1px dashed #D7CBB6;
+    border-radius: 10px;
+    padding: 20px 16px;
+
+    font-family: Public Sans;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #13231B;
+}
+
+.rp-card-receipt > div:nth-of-type(3) > p:last-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+}
+
+.rp-card-receipt > div:nth-of-type(4) {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    color: #4C5B52;
+
+    border-top: 1px solid #E8E0D1;
+    padding-top: 20px;
+}
+
+.rp-card-receipt > div:nth-of-type(4) > h2 {
+    margin: 0 0 8px;
+
+    font-family: Fraunces;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17.92px;
+    letter-spacing: -0.24px;
+    color: #13231B;
+}
+
+.rp-card-receipt > div:nth-of-type(4) > ol {
+    margin: 0;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rp-card-receipt > div:nth-of-type(4) > ol > li > span:first-of-type {
+    font-weight: 700;
+}
+
+.rp-card-receipt > .rp-card-option {
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+}
+
+.rp-card-receipt > .rp-card-option > p {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #0F6B4F;
+}
