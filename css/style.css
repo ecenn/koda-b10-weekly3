@@ -1055,7 +1055,7 @@ footer {
 
 .help-page > div:last-of-type {
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 3.5fr 3fr;
     gap: 32px;
     width: 100%;
     align-items: auto;
@@ -1089,6 +1089,11 @@ footer {
     text-transform: initial;
     color: var(--font-color-dark);
     margin: 0;
+}
+
+.faq-box > img {
+    max-width: 16px;
+    height: auto;
 }
 
 .help-aside {
@@ -1140,7 +1145,7 @@ footer {
     font-family: Public Sans;
     font-weight: 400;
     font-style: Regular;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15.4px;
     letter-spacing: 0%;
     vertical-align: middle;
