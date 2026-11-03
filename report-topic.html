@@ -34,7 +34,7 @@
                     </div>
                     <img src="assets/i-chevron-down.svg" alt="i-chevron-down">
                 </button>
-                <button class="btn btn-main-dark" >
+                <button class="btn btn-main-dark user-rp-btn">
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report an Issue
                 </button>
@@ -42,7 +42,99 @@
         </nav>
     </header>
     <main>
-
+        <div class="rp-flow-container">
+            <div class="rp-aside">
+                <div>
+                    <p>Community Intake</p>
+                    <h2>Report an Issue</h2>
+                    <p>Public civic reporting for Indonesian municipal services.</p>
+                </div>
+                <div>
+                    <button class="btn btn-main-dark"><span>01</span>Topic</button>
+                    <button class="btn btn-main-light"><span>02</span>Location</button>
+                    <button class="btn btn-main-light"><span>03</span>Proof</button>
+                    <button class="btn btn-main-light"><span>04</span>Review & Send</button>
+                </div>
+                <div>
+                    <div><img src="assets/shield-icon.svg" alt="shield-icon">Independent Verification</div>
+                    Our verification desk checks each report androutes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.
+                </div>
+                <div>
+                    Cancel and return to feed
+                </div>
+            </div>
+            <div class="rp-card">
+                <form class="rp-card-title">
+                    <div>
+                        <p>Step 01 of 04</p>
+                        <h2>What needs fixing?</h2>
+                        <p>Select the municipal service category that best matches the issue observed.</p>
+                    </div>
+                    <div class="rp-card-category">
+                        <button type="button" value="road-transit">
+                            <div>
+                                <div><img src="assets/road-transit-icon.svg" alt="road-transit-icon">Road & Transit</div>
+                                <span>48h SLA</span>
+                            </div>
+                            <p>Pothole / Sidewalk (Trotoar)</p>
+                            <p>Potholes, broken sidewalk slabs, damaged drainage grates</p>
+                        </button>
+                        <button type="button" value="water-sewage">
+                            <div>
+                                <div><img src="assets/water-sewage-icon.svg" alt="water-sewage-icon">Water & Sewage</div>
+                                <span>24h SLA</span>
+                            </div>
+                            <p>Water Burst / Pipa Bocor</p>
+                            <p>Pipeline bursts, flooding tap leaks, dry taps</p>
+                        </button>
+                        <button type="button" value="street-lighting">
+                            <div>
+                                <div><img src="assets/street-lighting-icon.svg" alt="street-lighting-icon">Street Lighting</div>
+                                <span>72h SLA</span>
+                            </div>
+                            <p>Street Lighting</p>
+                            <p>Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
+                        </button>
+                        <button type="button" value="sanitation-waste">
+                            <div>
+                                <div><img src="assets/sanitation-waste-icon.svg" alt="sanitation-waste-icon">Sanitation & Waste</div>
+                                <span>36h SLA</span>
+                            </div>
+                            <p>Trash Pile / Sampah Liar</p>
+                            <p>Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
+                        </button>
+                        <button type="button" value="park-trees">
+                            <div>
+                                <div><img src="assets/park-trees-icon.svg" alt="park-trees-icon">Public Parks & Trees</div>
+                                <span>48h SLA</span>
+                            </div>
+                            <p>Hazardous Tree / Rawan Tumbang</p>
+                            <p>Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
+                        </button>
+                        <button type="button" value="noise-disturbance">
+                            <div>
+                                <div><img src="assets/noise-disturbance-icon.svg" alt="noise-disturbance-icon">Noise & Disturbance</div>
+                                <span>48h SLA</span>
+                            </div>
+                            <p>Late-night Noise / Ketertiban</p>
+                            <p>Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
+                        </button>
+                        <button type="button" value="building-zoning">
+                            <div>
+                                <div><img src="assets/building-zone-icon.svg" alt="building-zone-icon">Building & Zoning</div>
+                                <span>72h SLA</span>
+                            </div>
+                            <p>Unsafe Construction / Bangunan</p>
+                            <p>Unsafe scaffolding, structural hazards, building boundary violations</p>
+                        </button>
+                    </div>
+                    <div class="rp-card-option">
+                        <button class="btn-cancel">Cancel</button>
+                        <button class="btn btn-main-dark" type="submit">Continue <img src="assets/arrow-light.svg" alt="arrow-light"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">

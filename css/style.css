@@ -926,7 +926,6 @@ footer {
     vertical-align: middle;
     text-transform: uppercase;
     color: var(--font-color-semilight);
-    color: var(--font-color-semidark);
 }
 
 .track-page > div:first-of-type > form {
@@ -1435,4 +1434,226 @@ nav > div:last-of-type > a:first-of-type > img {
     vertical-align: middle;
     text-transform: capitalize;
     color: #0A5540; 
+}
+
+.user-rp-btn {
+    font-size: 12px;
+}
+
+.rp-flow-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.rp-aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rp-aside > div {
+    margin-bottom: 20px;
+}
+
+.rp-aside > div:first-of-type,
+.rp-card-title > div:first-of-type {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--font-color-semidark);
+    margin-bottom: 12px;
+}
+
+.rp-aside > div:first-of-type > h2,
+.rp-card-title > div:first-of-type > h2 {
+    margin: 0;
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 35.2px;
+    line-height: 39.42px;
+    letter-spacing: -0.88px;
+    vertical-align: middle;
+    color: var(--font-color-dark);
+}
+
+.rp-aside > div:first-of-type > p:first-of-type,
+.rp-card-title > div:first-of-type > p:first-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--font-color-semilight);
+}
+
+.rp-aside > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rp-aside > div:nth-of-type(2) > button {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFF;
+    justify-content: start;
+    padding: 12px;
+}
+
+.rp-aside > div:nth-of-type(2) > button > span {
+    font-family: IBM Plex Mono;
+    font-style: SemiBold;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.rp-aside > div:nth-of-type(2) > .btn-main-dark {
+    font-weight: 600;
+}
+
+.rp-aside > div:nth-of-type(2) > .btn-main-light {
+    color: #84928A;
+    background: transparent;
+    border: none;
+    font-weight: 400;
+}
+
+.rp-aside > div:nth-of-type(3) {
+    background-color: #FFFDF8;
+    border: 1px dashed #D7CBB6;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 17.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rp-aside > div:nth-of-type(3) > div {
+    font-weight: 600;
+    color: #13231B;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.rp-aside > div:last-of-type {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #0F6B4F;
+}
+
+.rp-card {
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    border-radius: 16px;
+    padding: 32px 36px;
+}
+
+.rp-card-title {
+    margin-bottom: 20px;
+}
+
+.rp-card-category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.rp-card-category > button {
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    border-radius: 12px;
+    font-family: Public Sans;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rp-card-category > button > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rp-card-category > button > div:first-of-type > div:first-of-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.rp-card-category > button > div:first-of-type > span {
+    background-color: #E6F2EB;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 10px;
+    line-height: 16px;
+    color: #0A5540;
+}
+
+.rp-card-category > button > p {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.rp-card-category > button > p:nth-of-type(2) {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    color: #84928A;
+}
+
+.rp-card-option {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #E8E0D1;
+    margin-top: 12px;
+}
+
+.rp-card-option > button {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border: none;
+    color: #0F6B4F;
+}
+
+.rp-card-option > .btn {
+    padding: 16px 24px;
 }
