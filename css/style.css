@@ -1856,3 +1856,124 @@ nav > div:last-of-type > a:first-of-type > img {
         color: #4C5B52;
     }
 }
+
+.rp-card-review {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+}
+
+.rp-card-review > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;;
+}
+
+.rp-card-review > div:nth-of-type(2) > textarea {
+    width: initial;
+    min-height: 200px;
+
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #13231B;
+
+    resize: none;
+}
+
+.rp-card-review > div:nth-of-type(2) > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rp-card-review > div:nth-of-type(3) {
+    background-color: #E6F2EB;
+    border: 1px solid #0F6B4F33;
+    border-radius: 12px;
+    padding: 16px;
+
+    width: initial;
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    align-items: center;
+}
+
+.rp-card-review > div:nth-of-type(3) > div {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #13231B;
+}
+
+.rp-card-review > div:nth-of-type(3) > div > p:last-of-type {
+    font-size: 12px;
+    color: #84928A;
+}
+
+.rp-card-review > div:nth-of-type(4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.rp-card-review > div:nth-of-type(4) > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rp-card-review > div:nth-of-type(5) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rp-card-review > div:nth-of-type(5) > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rp-card-review > div:nth-of-type(5) > div > div {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    align-items: center;
+}
+
+.rp-card-review > div:nth-of-type(5) > div > div > div {
+    display: flex;
+    gap: 8px;
+
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #4C5B52;
+
+}
+
+.rp-card-review > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    color: #4C5B52;
+}
