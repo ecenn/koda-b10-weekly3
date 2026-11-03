@@ -1207,12 +1207,161 @@ footer {
     height: 100%;
     z-index: 1;
     background-color: #13231B8C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal > .login {
-    
+.modal > .login,
+.modal > .register {
+    width: 600px;
+    background-color: var(--second-color);
+    border: 1px solid #D7CBB6;
+    border-radius: 18px;
 }
 
-/* .modal > .register {
+.login > div:first-of-type,
+.register > div:first-of-type {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #4C5B52;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 24px 16px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom: 1px solid #E8E0D1;
+    background-color: #F4EFE4;
+}
 
-} */
+.login > div:first-of-type > div:first-of-type,
+.register > div:first-of-type > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Fraunces;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18.4px;
+    line-height: 20.61px;
+    letter-spacing: -0.28px;
+    vertical-align: middle;
+    color: #13231B;
+}
+
+.login > div:first-of-type > div:first-of-type > h2,
+.register > div:first-of-type > div:first-of-type > h2 {
+    margin: 0;
+}
+
+.login > div:nth-of-type(2),
+.register > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 16px 24px;
+    justify-content: space-between;
+}
+
+.login > div:nth-of-type(2) > button,
+.register > div:nth-of-type(2) > button {
+    flex: 1;
+    padding: 16px 0;
+    font-family: Public Sans;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.login > div:nth-of-type(2) > .btn-main-light,
+.register > div:nth-of-type(2) > .btn-main-light {
+    background-color: #F4EFE4;
+    color: #4C5B52;
+    border: none;
+}
+
+.login > form,
+.register > form {
+    padding: 16px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login > form > label,
+.register > form > label,
+.register > form > div > div > label {
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #4C5B52;
+}
+
+.login > form > input,
+.register > form > input,
+.register > form > div > div > input {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+    padding: 12px;
+    border: 1px solid #D7CBB6;
+    border-radius: 12px;
+    background-color: #FFFDF8;
+}
+
+.login > form > input:focus,
+.register > form > input:focus {
+    outline: none;
+    border: 1px solid #0F6B4F;
+    box-shadow: 0 0 0 3px #0F6B4F21;
+}
+
+.register > form > div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.register > form > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.register > form > span {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #84928A;
+}
+
+.login > form > .btn-main-dark,
+.register > form > .btn-main-dark {
+    padding: 12px 0;
+}

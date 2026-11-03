@@ -239,7 +239,37 @@
     </footer>
     <div class="modal">
         <div class="register">
-            
+            <div>
+                <div>
+                    <h2>Sign In to WargaReport</h2>
+                    <img src="assets/close-x-icon.svg" alt="close-x-icon">
+                </div>
+                <p>Sign in to lodge a complaint or upvote issues.</p>
+            </div>
+            <div>
+                <button class="btn btn-main-light" href="login.html">Sign In Existing Account</button>
+                <button class="btn btn-main-dark" href="register.html">Register as Citizen</button>
+            </div>
+            <form action="#">
+                <label for="name">Full Name (Nama Lengkap) *</label>
+                <input type="text" id="email" placeholder="e.g. Budi Santoso">
+                <div>
+                    <div>
+                        <label for="email">Email Address *</label>
+                        <input type="text" id="email" placeholder="e.g. budi@wargareport.id">
+                    </div>
+                    <div>
+                        <label for="email">Phone / WhatsApp *</label>
+                        <input type="text" id="email" placeholder="+62 812-...">
+                    </div>
+                </div>
+                <label for="email">NIK</label>
+                <input type="text" id="email" placeholder="16 digits for verified resident badge (e.g. 3174...)">
+                <span>Used exclusively for verification under UU PDP and never shown to the public.</span>
+                <label for="password">Password *</label>
+                <input type="text" id="password" placeholder="Create a password">
+                <button class="btn btn-main-dark"><img src="assets/checklist-icon.svg" alt="checklist-icon">Create Account & Continue</button>
+            </form>
         </div>
     </div>
 </body>
