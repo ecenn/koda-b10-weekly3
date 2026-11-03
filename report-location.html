@@ -73,8 +73,28 @@
                         <h2>Where is it located?</h2>
                         <p>Provide street address, RT/RW, or notable landmark for inspection crews.</p>
                     </div>
-                    <div class="">
-
+                    <div class="rp-card-location">
+                        <label for="area">Kelurahan / Kecamatan & Wilayah</label>
+                        <select class="answer-light" name="area" id="area">
+                            <option value="coblong">Coblong</option>
+                            <option value="lembang">Lembang</option>
+                            <option value="cimenyan">Cimenyan</option>
+                        </select>
+                        <label for="common-areas">Common areas in Coblong · Kota Bandung</label>
+                        <div>
+                            <input class="btn btn-main-light" type="button" value="Jl. Dago">
+                            <input class="btn btn-main-light" type="button" value="Institut Teknologi Bandung (ITB)">
+                            <input class="btn btn-main-light" type="button" value="Simpang Dago">
+                            <input class="btn btn-main-light" type="button" value="Pasar Dago">
+                            <input class="btn btn-main-light" type="button" value="Jl. Ir. H. Juanda">
+                        </div>
+                        <label for="street">Street Address, RT/RW, or Landmark *</label>
+                        <input  class="answer-light" type="text" id="street" placeholder="Jl. Tamansari depan Kebun Binatang">
+                        <div>
+                            <img src="assets/map-pin-icon.svg" alt="map-pin-icon">
+                            <p>Coordinates auto-pinned</p>
+                            <span>6.2088° S, 106.8456° E (WIB)</span>
+                        </div>
                     </div>
                     <div class="rp-card-option">
                         <button class="btn btn-main-light"><img src="assets/arrow-left-dark-icon.svg" alt="arrow-left-dark-icon"> Back</button>
