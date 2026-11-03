@@ -1365,3 +1365,74 @@ footer {
 .register > form > .btn-main-dark {
     padding: 12px 0;
 }
+
+/* REPORT FLOW */
+
+nav > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    max-height: 48px;
+    align-items: center;
+}
+
+nav > div:last-of-type > a:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+nav > div:last-of-type > a:first-of-type > img {
+    max-width: 34px;
+}
+
+.user-btn {
+    display: flex;
+    gap: 8px;
+}
+
+.user-btn > div:first-of-type {
+    min-width: 28px;
+    min-height: 28px;
+    background-color: #E6F2EB;
+    border: 1px solid #0F6B4F59;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #0A5540;
+}
+.user-btn > div:nth-of-type(2) {
+    font-family: Public Sans;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #13231B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 4px;
+}
+
+.user-btn > div:nth-of-type(2) > p {
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    line-height: 12.5px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #0A5540; 
+}
