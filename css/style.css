@@ -1958,12 +1958,10 @@ nav > div:last-of-type > a:first-of-type > img {
     font-weight: 400;
     font-style: Regular;
     font-size: 12px;
-    leading-trim: NONE;
     line-height: 19.2px;
     letter-spacing: 0%;
     vertical-align: middle;
     color: #4C5B52;
-
 }
 
 .rp-card-review > div:last-of-type {
@@ -2119,3 +2117,9 @@ nav > div:last-of-type > a:first-of-type > img {
     vertical-align: middle;
     color: #0F6B4F;
 }
+
+/* ---- */
+
+.notification
+
+.notification
