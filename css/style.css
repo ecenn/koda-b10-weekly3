@@ -2365,6 +2365,8 @@ nav > div:last-of-type > a:first-of-type > img {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    width: 100%;
 }
 
 .account-page > div:first-of-type {
@@ -2469,6 +2471,7 @@ nav > div:last-of-type > a:first-of-type > img {
         
         table {
             border-collapse: collapse;
+            width: 100%;
             
             tr:first-of-type {
                 background-color: #F4EFE4;
@@ -2558,3 +2561,95 @@ nav > div:last-of-type > a:first-of-type > img {
         }
     }
 }
+
+/* ACCOUNT - PROFILE */
+.account-profile {
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    border-radius: 16px;
+    width: 50%;
+    padding: 28px 32px;
+}
+
+.rp-card-account-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    div:first-of-type {
+
+        h2 {
+            margin: 0;
+            font-family: Fraunces;
+            font-weight: 600;
+            font-size: 18.4px;
+            line-height: 20.61px;
+            letter-spacing: -0.28px;
+            color: #13231B;
+        }
+
+        p {
+            font-family: Public Sans;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 19.2px;
+            letter-spacing: 0%;
+            color: #84928A;
+        }
+    }
+
+    div:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 72px auto;
+        column-gap: 20px;
+
+        div:first-of-type {
+            width: 72px;
+            height: 72px;
+            background-color: #E6F2EB;
+            border-radius: 50%;
+            border: 1px solid #0F6B4F59;
+
+            align-items: center;
+            justify-content: center;
+
+            font-family: IBM Plex Mono;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 35.2px;
+            letter-spacing: 0%;
+            color: #0A5540;
+        }
+
+        div:last-of-type {
+            display: flex;
+            flex-direction: column;
+            gap: 4x;
+            justify-content: space-between;
+            
+            font-family: Public Sans;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 20.8px;
+            letter-spacing: 0%;
+            color: #13231B;
+
+            p:last-of-type {
+                font-weight: 400;
+                font-size: 11px;
+                color: #84928A;
+            }
+
+            .btn {
+                width: 20%;
+            }
+        }
+    }
+}
+

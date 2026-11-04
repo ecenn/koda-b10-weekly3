@@ -50,14 +50,48 @@
             <div>
                 <ul>
                     <li><a href="account-complaint.html">My complaints</a></li>
-                    <li><a href="account-profile.html">Profile</a></li>
+                    <li><a class="account-link-click" href="account-profile.html">Profile</a></li>
                     <li><a href="account-notification.html">Notifications</a></li>
                     <li><a href="account-privacy.html">Privacy & data</a></li>
                     <li><a href="account-security.html">Security</a></li>
                 </ul>
             </div>
-            <div>   <!-- account section -->
-
+            <div class="account-profile">
+                <form action="#">
+                    <div class="rp-card-account-profile">
+                        <div>
+                            <h2>Filer Identity & Preferences</h2>
+                            <p>Used to pre-fill future complaint forms and verify status inquiries.</p>
+                        </div>
+                        <div>
+                            <div>FS</div>
+                            <div>
+                                <p>Profile photo</p>
+                                <p>JPG, PNG, or WebP. Square images work best.</p>
+                                <button class="btn btn-main-light" type="button">Upload photo</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="rp-card-form-label" for="nama">Full Legal Name</label>
+                            <input class="answer-light" type="text" name="nama" id="nama" placeholder="Fahrul Septiana">
+                        </div>
+                        <div>
+                            <label class="rp-card-form-label" for="email">Primary Notification Email</label>
+                            <input class="answer-light" type="text" name="email" id="email" placeholder="fahrul@wargareport.id">
+                        </div>
+                        <div>
+                            <label class="rp-card-form-label" for="">SMS Contact Number</label>
+                            <input class="answer-light" type="text" name="email" id="email" placeholder="+62 812-9842-1054">
+                        </div>
+                        <div>
+                            <label class="rp-card-form-label" for="email">NIK</label>
+                            <input class="answer-light" type="text" name="email" id="email" placeholder="3174051809900004">
+                        </div>
+                        <div>
+                            <button class="btn btn-main-dark" type="button">Save profile changes</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
