@@ -2118,7 +2118,7 @@ nav > div:last-of-type > a:first-of-type > img {
     color: #0F6B4F;
 }
 
-/* ---- */
+/* NOTIFICATION */
 
 .notification {
     display: flex;
@@ -2357,4 +2357,204 @@ nav > div:last-of-type > a:first-of-type > img {
 .notification > div:last-of-type > .rp-card-receipt > div:last-of-type > .btn {
     padding: 8px 16px;
     font-size: 12px;
+}
+
+/* ACCOUNT FLOW */
+
+.account-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account-page > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-family: IBM Plex Mono;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 17.6px;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        color: #84928A;
+    }
+
+    h1 {
+        margin: 0;
+        font-family: Fraunces;
+        font-weight: 600;
+        font-size: 35.2px;
+        line-height: 39.42px;
+        letter-spacing: -0.88px;
+        color: #13231B;
+    }
+}
+
+.account-page > div:nth-of-type(2) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E8E0D1;
+}
+
+.account-page > div:nth-of-type(2) > ul{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li > a {
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-family: Public Sans;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20.8px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #4C5B52;
+    }
+}
+
+.account-link-click {
+    background-color: var(--accent-color);
+    color: #FFFFFF !important;
+}
+
+/* ACCOUNT - COMPLAINT */
+.account-page > .account-complaint {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    div:first-of-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-family: IBM Plex Mono;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20.8px;
+            letter-spacing: 0.78px;
+            text-transform: uppercase;
+            color: #84928A;
+        }
+
+        button {
+            background-color: #0F6B4F;
+            border-radius: 999px;
+            border: none;
+            padding: 8px 16px;
+
+            font-family: Public Sans;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14.4px;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+
+    div:last-of-type {
+        border: 1px solid #D7CBB6 !important;
+        border-radius: 16px;
+        overflow: hidden;
+        
+        table {
+            border-collapse: collapse;
+            
+            tr:first-of-type {
+                background-color: #F4EFE4;
+                
+                th {
+                    padding: 16px;
+                    font-family: IBM Plex Mono;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 16px;
+                    letter-spacing: 0.4px;
+                    text-transform: uppercase;
+                    color: #4C5B52;
+                    
+                    text-align: left;
+                }
+            }
+            
+            tr {
+                background-color: #FFFDF8;
+                
+                td {
+                    padding: 16px;
+                    border-top: 1px solid #D7CBB6;
+                    vertical-align: middle;
+                }
+
+                td:first-of-type {
+                    font-family: IBM Plex Mono;
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 20.8px;
+                    letter-spacing: 0%;
+                    color: #0F6B4F;
+                }
+
+                td:nth-of-type(2) {
+                    font-family: Public Sans;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 19.2px;
+                    letter-spacing: 0%;
+                    color: #13231B;
+
+                    p:last-of-type {
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #84928A;
+                    }
+                }
+                
+                td:nth-of-type(3) {
+                    font-family: Public Sans;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 19.2px;
+                    letter-spacing: 0%;
+                    color: #4C5B52;
+                }
+
+                td:nth-of-type(5) {
+                    font-family: IBM Plex Mono;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 19.2px;
+                    letter-spacing: 0%;
+                    color: #4C5B52;
+                }
+
+                td:last-of-type {
+                    font-family: IBM Plex Mono;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 19.2px;
+                    letter-spacing: 0%;
+                    color: #4C5B52;
+                }
+            }
+
+            tr:nth-of-type(3) {
+                td:nth-of-type(5) {
+                    font-weight: 500;
+                    vertical-align: center;
+                    color: #A33F31;
+                }
+            }
+        }
+    }
 }

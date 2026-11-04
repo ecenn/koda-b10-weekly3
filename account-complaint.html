@@ -49,15 +49,52 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="account-complaint.html">My complaints</a></li>
+                    <li><a class="account-link-click" href="account-complaint.html">My complaints</a></li>
                     <li><a href="account-profile.html">Profile</a></li>
                     <li><a href="account-notification.html">Notifications</a></li>
                     <li><a href="account-privacy.html">Privacy & data</a></li>
                     <li><a href="account-security.html">Security</a></li>
                 </ul>
             </div>
-            <div>   <!-- account section -->
-
+            <div class="account-complaint">
+                <div>
+                    <p>Your tracked records (2)</p>
+                    <button type="button">+ File new complaint</button>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Case ID</th>
+                            <th>Title / Location</th>
+                            <th>Agency</th>
+                            <th>Status</th>
+                            <th>SLA Target</th>
+                            <th>Last Update</th>
+                        </tr>
+                        <tr>
+                            <td>CMP-2026-9472</td>
+                            <td>
+                                <p>Pohon tumbang di depan Kebun Binatang samping Kampus ITB</p>
+                                <p>Jl. Tamansari depan Kebun Binatang</p>
+                            </td>
+                            <td>Dinas Pertamanan dan Hutan Kota Bandung</td>
+                            <td><div class="status submitted"><img src="assets/submitted-icon.svg" alt="submitted-icon">Submitted</div></td>
+                            <td>Awaiting verification</td>
+                            <td>Oct 30</td>
+                        </tr>
+                        <tr>
+                            <td>CMP-2026-8841</td>
+                            <td>
+                                <p>PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT</p>
+                                <p>Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)</p>
+                            </td>
+                            <td>Perumda PAM JAYA (Clean Drinking Water)</td>
+                            <td><div class="status in-review"><img src="assets/in-review-icon.svg" alt="in-review-icon">In review</div></td>
+                            <td><img src="assets/danger-icon.svg" alt="danger-icon"> Breached by 64h 2m</td>
+                            <td>Oct 29</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
