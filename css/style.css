@@ -2571,7 +2571,7 @@ nav > div:last-of-type > a:first-of-type > img {
     padding: 28px 32px;
 }
 
-.rp-card-account-profile {
+.account-profile-card {
     display: flex;
     flex-direction: column;
     gap: 16px;
