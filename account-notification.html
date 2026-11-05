@@ -51,13 +51,38 @@
                 <ul>
                     <li><a href="account-complaint.html">My complaints</a></li>
                     <li><a href="account-profile.html">Profile</a></li>
-                    <li><a href="account-notification.html">Notifications</a></li>
+                    <li><a class="account-link-click" href="account-notification.html">Notifications</a></li>
                     <li><a href="account-privacy.html">Privacy & data</a></li>
                     <li><a href="account-security.html">Security</a></li>
                 </ul>
             </div>
-            <div>   <!-- account section -->
-
+            <div class="account-notification">
+                <div>
+                    <h2>Dispatch Notification Preferences</h2>
+                    <p>Control when municipal bureaus may send automated status alerts.</p>
+                </div>
+                <label for="">
+                    <input type="checkbox" name="" id="">
+                    <span>
+                        <p>Email Status Transitions</p>
+                        <p>Receive an email whenever an inspector triages, assigns, or resolves your case.</p>
+                    </span>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="" id="">
+                    <span>
+                        <p>Urgent SMS Alerts</p>
+                        <p>Receive text messages when emergency crews need physical gate access.</p>
+                    </span>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="" id="">
+                    <span>
+                        <p>Weekly Ward Resolution Digest</p>
+                        <p>Summary of all public infrastructure projects completed in your postal code.</p>
+                    </span>
+                </label>
+                <button class="btn btn-main-dark" type="button">Update alert preferences</button>
             </div>
         </div>
     </main>
