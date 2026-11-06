@@ -2757,11 +2757,11 @@ nav > div:last-of-type > a:first-of-type > img {
         }
     }
 
-    /* .btn {
+    .btn {
         width: fit-content;
         font-size: 12px;
         padding: 10px 16px;
-    } */
+    }
 }
 
 /* ACCOUNT - PRIVACY */
