@@ -2568,6 +2568,12 @@ nav > div:last-of-type > a:first-of-type > img {
                     color: #4C5B52;
                 }
 
+                td:nth-of-type(4) {
+                    .status {
+                        width: fit-content;
+                    }
+                }
+
                 td:nth-of-type(5) {
                     font-family: IBM Plex Mono;
                     font-weight: 400;
