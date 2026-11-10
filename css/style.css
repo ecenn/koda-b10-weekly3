@@ -2845,7 +2845,7 @@ nav > div:last-of-type > a:first-of-type > img {
     }
 }
 
-/* ACCOUNT - SECURITY */
+/* ACCOUNT - SECURITY (BUG) */
 
 .account-security {
     background-color: #FFFDF8;
@@ -2908,4 +2908,468 @@ nav > div:last-of-type > a:first-of-type > img {
             letter-spacing: 0%;
             text-align: center;
         }
+}
+
+.account-security > div:nth-of-type(2), div:nth-of-type(3),div:nth-of-type(4) {
+    position: relative;
+    
+    .container-input {
+        position: inherit;
+        /* eye password (BUG) */
+    }
+    
+}
+
+/* DETAIL REPORT */
+
+.back-and-share {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Public Sans;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    
+    div:first-of-type {
+        height: fit-content;
+        
+        color: #0F6B4F;
+        align-items: center;
+    }
+    
+    div:last-of-type {
+        .btn {
+            font-family: Public Sans;
+            font-weight: 600;
+            font-size: 13px;
+            color: #13231B;
+
+            padding: 8px 12px;
+        }
+    }
+}
+
+.detail-report {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.detail-report > div:first-of-type {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-report > div:last-of-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* .detail-report > div:first-of-type > .rp-card {
+    
+} */
+
+.detail-report > div:first-of-type > .rp-card > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    .status {
+        width: fit-content;
+    }
+
+    div:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        font-family: IBM Plex Mono;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0%;
+        color: #4C5B52;
+    }
+
+    div:nth-of-type(3) {
+        flex-grow: 1;
+    }
+
+    button {
+        padding: 12px 16px;
+        font-size: 12px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+.detail-report > div:first-of-type > .rp-card > h1 {
+    font-family: Fraunces;
+    font-weight: 600;
+    font-size: 30.4px;
+    line-height: 35.87px;
+    letter-spacing: -0.76px;
+    color: #13231B;
+}
+
+.detail-report > div:first-of-type > .rp-card > p {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23.8px;
+    letter-spacing: 0%;
+    color: #4C5B52;
+}
+
+.detail-report > div:first-of-type > .rp-card > div:last-of-type {
+    padding-top: 20px;
+    border-top: 1px solid #E8E0D1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    span {
+        font-family: IBM Plex Mono;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 17.6px;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        color: #84928A;
+    }
+    
+    .pipeline {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 8px;
+
+        div {
+            background-color: #E6F2EB;
+            border: 1px solid #0F6B4F;
+            border-radius: 10px;
+            padding: 12px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            font-family: IBM Plex Mono;
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 14.4px;
+            letter-spacing: 0%;
+            color: #0A5540;
+
+            p:last-of-type {
+                font-family: Public Sans;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 17.6px;
+                letter-spacing: 0%;
+            }
+        }
+
+        div:nth-of-type(3), div:last-of-type {
+            background-color: #F7F2E7;
+            border-color: #E8E0D1;
+
+            color: #84928A;
+        }
+    }
+}
+
+.detail-report > div:first-of-type > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    h2 {
+        margin: 0;
+        
+        font-family: Fraunces;
+        font-weight: 600;
+        font-size: 19.2px;
+        line-height: 21.5px;
+        letter-spacing: -0.29px;
+        color: #13231B;
+    }
+
+    p {
+        padding-bottom: 6px;
+
+        font-family: Public Sans;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19.2px;
+        letter-spacing: 0%;
+        color: #84928A;
+    }
+}
+
+.detail-report > div:first-of-type > div:nth-of-type(2) > div {
+    display: flex;
+    flex-direction: 16px;    
+    width: 100%;
+    gap: 14px;
+
+    > div {
+        flex: 1;
+        background-color: #FFFDF8;
+        border: 1px solid #E8E0D1;
+        border-radius: 14px;
+
+        overflow: hidden;
+    
+        
+        > div:first-of-type {
+            max-width: inherit;
+            max-height: 240px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            
+            overflow: hidden;
+
+            > img {
+                width: 100%;
+                height: fit-content;
+                object-fit: cover;
+            }
+
+        }
+
+        > div:last-of-type {
+            padding: 12px;
+
+            p {
+                padding: 0;
+                font-family: Public Sans;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 19.2px;
+                letter-spacing: 0%;
+                color: #13231B;
+            }
+    
+            p:nth-of-type(2) {
+                font-family: IBM Plex Mono;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 16px;
+                letter-spacing: 0%;
+                text-transform: uppercase;
+                color: #84928A;
+            }
+    
+            p:last-of-type {
+                font-weight: 400;
+                font-size: 11px;
+                color: #4C5B52;
+            }
+        }
+    }
+}
+
+.detail-report > div:first-of-type > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-family: Public Sans;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    color: #13231B;
+
+    > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin: 0;
+            
+            font-family: Fraunces;
+            font-weight: 600;
+            font-size: 19.2px;
+            line-height: 21.5px;
+            letter-spacing: -0.29px;
+            color: #13231B;
+        }
+    
+        p {
+            padding: 6px 0;
+    
+            font-family: Public Sans;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 19.2px;
+            letter-spacing: 0%;
+            color: #84928A;
+        }
+    }
+
+    > div:nth-of-type(2) {
+        > div > div:first-of-type {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            
+            div:first-of-type {
+                width: 22px;
+                height: 22px;
+                background-color: #FFFDF8;
+                border: 1px solid #D7CBB6;
+                border-radius: 50%;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            p {
+                font-family: Public Sans;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20.8px;
+                letter-spacing: 0%;
+                color: #13231B;
+            }
+
+            div:last-of-type {
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4px 8px;
+            }
+        }
+
+        > div > div:last-of-type {
+
+            display: block;
+            padding-left: 19px;
+            padding-bottom: 20px;
+            border-left: 1px solid #D7CBB6;
+            margin-left: 11px;
+
+            p {
+                font-weight: 500;
+                font-size: 11px;
+
+                span {
+                    font-family: IBM Plex Mono;
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 17.6px;
+                    letter-spacing: 0%;
+                    color: #84928A;
+                }
+            }
+
+            div {
+                background: #F7F2E7;
+                border: 1px solid #E8E0D1;
+                border-radius: 10px;
+                padding: 12px;
+
+                font-weight: 400;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.detail-report > .rp-card:last-of-type {
+    height: fit-content;
+}
+
+.detail-report > .rp-card:last-of-type > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E8E0D1;
+}
+
+.detail-report > .rp-card:last-of-type > div:first-of-type > p:first-of-type,
+.term {
+    font-family: IBM Plex Mono;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.1px;;
+    text-transform: uppercase;
+    color: #84928A;
+}
+
+.detail-report > .rp-card:last-of-type > div:first-of-type > p:last-of-type {
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 33.6px;
+    letter-spacing: -0.63px;
+    color: #0A5540;
+}
+
+.detail-report > .rp-card:last-of-type > div:nth-of-type(2) {
+    font-family: Public Sans;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    > div:nth-of-type(3) {
+        > div {
+            display: grid;
+            grid-template-columns: 14px auto;
+        }
+
+        > div:last-of-type {
+            p:last-of-type {
+                font-weight: 400;
+                font-size: 11px;
+                color: #84928A;
+            }
+        }
+    }
+
+    > div:last-of-type {
+        p:last-of-type {
+            font-family: IBM Plex Mono;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            letter-spacing: 0%;
+            color: #84928A;
+        }
+    }
+}
+
+.detail-report > .rp-card:last-of-type > div:last-of-type {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #E8E0D1;
+
+    .btn {
+        width: 100%;
+    }
 }
