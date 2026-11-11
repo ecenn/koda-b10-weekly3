@@ -2898,24 +2898,41 @@ nav > div:last-of-type > a:first-of-type > img {
     }
 
     .btn {
-            padding: 10px 16px;
-            width: fit-content;
-            align-items: center;
+        padding: 10px 16px;
+        width: fit-content;
+        align-items: center;
 
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 14.4px;
-            letter-spacing: 0%;
-            text-align: center;
-        }
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
 }
 
-.account-security > div:nth-of-type(2), div:nth-of-type(3),div:nth-of-type(4) {
+.account-security > div:nth-of-type(2), div:nth-of-type(3), div:nth-of-type(4) {
     position: relative;
     
     .container-input {
         position: inherit;
-        /* eye password (BUG) */
+        display: grid;
+        grid-template-columns: auto 30px;
+        align-items: center;
+
+        input {
+            background-color: transparent;
+            border: none;
+        }
+
+        button:focus,
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
     }
     
 }
