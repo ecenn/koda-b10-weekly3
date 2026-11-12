@@ -9,11 +9,10 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>
-                <a href="index.html">
-                    <img src="./assets/logo.svg" alt="logo-icon">
-                    WargaReport
+        <nav class="sidebar">
+            <div onclick=hideSidebar()>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#0F6B4F"><path d="M6.4,19L5,17.6L10.6,12L5,6.4L6.4,5L12,10.6L17.6,5L19,6.4L13.4,12L19,17.6L17.6,19L12,13.4L6.4,19Z"/></svg>
                 </a>
             </div>
             <div>
@@ -34,7 +33,48 @@
                 </button>
             </div>
         </nav>
+        <nav class="navbar">
+            <div>
+                <a href="index.html">
+                    <img src="./assets/logo.svg" alt="logo-icon">
+                    WargaReport
+                </a>
+            </div>
+            <div class="hideMobile">
+                <ul>
+                    <li><a href="live-feed.html">Live Feed</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="help.html">How it works</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn btn-signin hideMobile">
+                    <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
+                    Sign In
+                </button>
+                <button class="btn btn-report hideMobile">
+                    <img src="assets/plus-light.svg" alt="plus-light-icon">
+                    Report
+                </button>
+            </div>
+            <div onclick=showSidebar()>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#0F6B4F"><path d="M3,18V16H21v2H3Zm0-5V11H21v2H3ZM3,8V6H21V8H3Z"/></svg>
+                </a>
+            </div>
+        </nav>
     </header>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
     <main>
         <div class="back-and-share">
             <div>
