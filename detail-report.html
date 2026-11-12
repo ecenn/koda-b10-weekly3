@@ -23,11 +23,11 @@
                 </ul>
             </div>
             <div>
-                <button class="btn btn-signin">
+                <button class="btn btn-signin" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
                 </button>
-                <button class="btn btn-report">
+                <button class="btn btn-report" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
                 </button>
@@ -48,11 +48,11 @@
                 </ul>
             </div>
             <div>
-                <button class="btn btn-signin hideMobile">
+                <button class="btn btn-signin hideMobile" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
                 </button>
-                <button class="btn btn-report hideMobile">
+                <button class="btn btn-report hideMobile" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
                 </button>
@@ -271,5 +271,85 @@
             <p>UU No. 25/2009 Compliant</p>
         </div>
     </footer>
+    <div class="modal">
+        <div class="login">
+            <div>
+                <div>
+                    <h2>Sign In to WargaReport</h2>
+                    <button type="button" onclick=hideModal()>
+                        <img src="assets/close-x-icon.svg" alt="close-x-icon">
+                    </button>
+                </div>
+                <p>Sign in to lodge a complaint or upvote issues.</p>
+            </div>
+            <div>
+                <button class="btn btn-main-dark" onclick=Login()>Sign In Existing Account</button>
+                <button class="btn btn-main-light" onclick=Register()>Register as Citizen</button>
+            </div>
+            <form action="#">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your Email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <button type="submit" class="btn btn-main-dark">Sign In <img src="assets/arrow-light.svg" alt="arrow-light-icon"></button>
+            </form>
+        </div>
+        <div class="register">
+            <div>
+                <div>
+                    <h2>Sign In to WargaReport</h2>
+                    <button type="button" onclick=hideModal()>
+                        <img src="assets/close-x-icon.svg" alt="close-x-icon">
+                    </button>
+                </div>
+                <p>Sign in to lodge a complaint or upvote issues.</p>
+            </div>
+            <div>
+                <button class="btn btn-main-light" onclick=Login()>Sign In Existing Account</button>
+                <button class="btn btn-main-dark" onclick=Register()>Register as Citizen</button>
+            </div>
+            <form action="#">
+                <label for="name">Full Name (Nama Lengkap) *</label>
+                <input type="text" id="name" placeholder="e.g. Budi Santoso">
+                <div>
+                    <div>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="e.g. budi@wargareport.id">
+                    </div>
+                    <div>
+                        <label for="phone">Phone / WhatsApp *</label>
+                        <input type="number" id="phone" placeholder="+62 812-...">
+                    </div>
+                </div>
+                <label for="email">NIK</label>
+                <input type="text" id="email" placeholder="16 digits for verified resident badge (e.g. 3174...)">
+                <span>Used exclusively for verification under UU PDP and never shown to the public.</span>
+                <label for="password">Password *</label>
+                <input type="text" id="password" placeholder="Create a password">
+                <button class="btn btn-main-dark"><img src="assets/checklist-icon.svg" alt="checklist-icon">Create Account & Continue</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal")
+        const login = document.querySelector(".login")
+        const register = document.querySelector(".register")
+
+        function Login() {
+            modal.style.display = "flex"
+            login.style.display = "flex"
+            register.style.display = "none"
+        }
+        function Register() {
+            modal.style.display = "flex"
+            register.style.display = "flex"
+            login.style.display = "none"
+        }
+        function hideModal() {
+            modal.style.display = "none"
+            register.style.display = "none"
+            login.style.display = "none"
+        }
+    </script>
 </body>
 </html>
