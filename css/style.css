@@ -2504,6 +2504,11 @@ nav > div:last-of-type > a:first-of-type > img {
         border: 1px solid #D7CBB6 !important;
         border-radius: 16px;
         overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            overflow-x: auto;
+        }
         
         table {
             border-collapse: collapse;
@@ -2599,6 +2604,11 @@ nav > div:last-of-type > a:first-of-type > img {
                     vertical-align: center;
                     color: #A33F31;
                 }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                white-space: nowrap;
             }
         }
     }
