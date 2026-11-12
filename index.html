@@ -80,12 +80,12 @@
             <h1>See something broken? Snap it. We push the city to fix it.</h1>
             <p>Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food delivery order, and keep authorities accountable.</p>
             <div>
-                <button class="btn btn-main-dark">
+                <button class="btn btn-main-dark" onclick=Login()>
                     <img src="assets/camera.svg" alt="camera-icon">
                     Snap a report
                     <img src="assets/arrow-light.svg" alt="arrow-light-icon">
                 </button>
-                <button class="btn btn-main-light">
+                <button class="btn btn-main-light" onclick="window.location.href='./track.html'">
                     Track a case
                 </button>
             </div>
@@ -125,7 +125,7 @@
                     <h2>Recent Community Reports</h2>
                     <p>Verified reports lodged in Jakarta and surrounding regions</p>
                 </div>
-                <button class="btn-arrow">View live feed →</button>
+                <button class="btn-arrow" onclick="window.location.href='./live-feed.html'">View live feed →</button>
             </div>
             <div class="report-grid">
                 <div class="card report-card"> <!-- card 1 -->
@@ -152,7 +152,7 @@
                             <img src="assets/like-thumb-icon.svg" alt="like-thumb-icon">
                             148
                         </button>
-                        <button class="btn-arrow">Inspect →</button>
+                        <button class="btn-arrow" onclick="window.location.href='./detail-report.html'">Inspect →</button>
                     </div>
                 </div>
                 <div class="card report-card"> <!-- card 2 -->
