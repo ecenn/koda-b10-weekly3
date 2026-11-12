@@ -93,16 +93,24 @@ nav > div:nth-of-type(2) > ul > li > a {
     font-family: var(--public-sans);
 }
 
-nav > div:last-of-type {
+nav > div:nth-of-type(3) {
     display: flex;
     gap: 8px;
+}
+
+.navbar > div:last-of-type {
+    display: none;
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+    }
 }
 
 .btn {
     border: none;
     border-radius: 999px;
     font-family: var(--public-sans);
-    display: flex;
+    display: flex;;
     justify-content: center;
     gap: 8px;
     align-items: center;
@@ -121,6 +129,48 @@ nav > div:last-of-type {
     background-color: var(--accent-color);
     color: var(--font-color-light);
     font-size: 12px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #fffdf83d;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px #13231b1e;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    div {
+        padding: 20px;
+    }
+    div:nth-of-type(2) {
+        width: 100%;
+        padding: 0 20px;
+        > ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+
+            > li {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hideMobile {
+        display: none;
+    }
 }
 
 /* MAIN - LANDING PAGE */
@@ -150,6 +200,10 @@ main > div > h1:first-of-type {
     line-height: 51.91px;
     vertical-align: middle;
     color: var(--font-color-dark);
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 }
 
 main > div > p:first-of-type {
@@ -163,6 +217,10 @@ main > div > p:first-of-type {
     letter-spacing: 0%;
     vertical-align: middle;
     color: var(--font-color-semidark);
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 }
 
 main > div:first-of-type > div:first-of-type {
@@ -216,7 +274,11 @@ main > div > div:first-of-type > button {
 }
 
 .main-card-1 {
-    flex-direction: row;   
+    flex-direction: row;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
 }
 
 .card {
@@ -314,6 +376,10 @@ main > div > div:first-of-type > button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .report-card {
@@ -348,6 +414,10 @@ main > div > div:first-of-type > button {
 .report-card > div:last-of-type > .btn-arrow {
     font-weight: 500;
     font-style: Medium;
+
+    @media screen and (max-width: 800px) {
+        font-size: 12px;
+    }
 }
 
 .report-card-status {
@@ -449,6 +519,7 @@ main > div > div:first-of-type > button {
     overflow: hidden;
 }
 
+/* FOOTER */
 footer {
     display: flex;
     flex-direction: column;
@@ -463,6 +534,10 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 28px;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-content > div:first-of-type {
@@ -470,6 +545,10 @@ footer {
     flex-direction: column;
     gap: 16px;
     width: 80%;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 }
 
 .footer-content > div:first-of-type > p:first-of-type {
@@ -2505,7 +2584,7 @@ nav > div:last-of-type > a:first-of-type > img {
         border-radius: 16px;
         overflow: hidden;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
             width: 100%;
             overflow-x: auto;
         }
@@ -2606,7 +2685,7 @@ nav > div:last-of-type > a:first-of-type > img {
                 }
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1024px) {
                 width: 100%;
                 white-space: nowrap;
             }
