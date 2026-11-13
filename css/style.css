@@ -101,7 +101,7 @@ nav > div:nth-of-type(3) {
 .navbar > div:last-of-type {
     display: none;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         display: flex;
     }
 }
@@ -174,7 +174,7 @@ button {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .hideMobile {
         display: none;
     }
@@ -208,7 +208,7 @@ main > div > h1:first-of-type {
     vertical-align: middle;
     color: var(--font-color-dark);
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 100%;
     }
 }
@@ -225,7 +225,7 @@ main > div > p:first-of-type {
     vertical-align: middle;
     color: var(--font-color-semidark);
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 100%;
     }
 }
@@ -283,7 +283,7 @@ main > div > div:first-of-type > button {
 .main-card-1 {
     flex-direction: row;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         flex-direction: column;
     }
 }
@@ -384,7 +384,7 @@ main > div > div:first-of-type > button {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
     }
 }
@@ -422,7 +422,7 @@ main > div > div:first-of-type > button {
     font-weight: 500;
     font-style: Medium;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         font-size: 12px;
     }
 }
@@ -439,6 +439,10 @@ main > div > div:first-of-type > button {
     letter-spacing: 0%;
     vertical-align: middle;
     color: var(--font-color-semilight);
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 }
 
 .status {
@@ -515,6 +519,11 @@ main > div > div:first-of-type > button {
     font-size: 16px;
     line-height: 19.2px;
     vertical-align: middle;
+
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+        text-align: center;
+    }
 }
 
 .report-card-img > img {
@@ -542,7 +551,7 @@ footer {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 28px;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
     }
 }
@@ -553,7 +562,7 @@ footer {
     gap: 16px;
     width: 80%;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 100%;
     }
 }
@@ -644,9 +653,15 @@ footer {
 
 .title-live {
     width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .title-live > div:first-of-type {
@@ -677,6 +692,10 @@ footer {
     vertical-align: middle;
     color: var(--font-color-dark);
     margin: 0;
+
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+    }
 }
 
 .title-live > div:first-of-type > p:nth-of-type(2) {
@@ -688,7 +707,7 @@ footer {
     letter-spacing: 0%;
     vertical-align: middle;
     color: var(--font-color-semidark);
-    width: 50%;
+    width: 60%;
 }
 
 .title-live > div:last-of-type {
@@ -744,6 +763,10 @@ footer {
     letter-spacing: 0%;
     vertical-align: middle;
     color: var(--font-color-semilight);
+    
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
 }
 
 .search-report > input {
@@ -807,6 +830,14 @@ footer {
     align-items: center;
     gap: 16px;
     padding: 4px 20px;
+
+    @media screen and (max-width: 1000px) {
+        width: 60%;
+        white-space: nowrap;
+        overflow: auto;
+        gap: 12px;
+        padding: 4px 12px;
+    }
 }
 
 .status-filter-bar > div:last-child {
@@ -882,6 +913,11 @@ footer {
     font-size: 16px;
     vertical-align: middle;
     color: var(--font-color-semidark);
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .live-feed-card > .report-card-img {
@@ -902,6 +938,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+    @media screen and (max-width: 1000px) {
+        align-items: center;
+    }
 }
 
 .live-feed-card > div:nth-of-type(2) > .report-card-status > span,
@@ -919,6 +958,10 @@ footer {
 .live-feed-card > div:nth-of-type(2) > .report-card-text,
 .live-feed-card:last-of-type > div:first-of-type > .report-card-text {
     width: 100%;
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+        text-align: center;
+    }
 }
 
 .live-feed-card > div:last-of-type,
@@ -954,9 +997,14 @@ footer {
 /* TRACK X HELP */
 
 .track-page {
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 40px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 }
 
 .help-page {
@@ -1139,6 +1187,11 @@ footer {
     gap: 32px;
     width: 100%;
     align-items: auto;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .faq-section {
@@ -3085,6 +3138,10 @@ nav > div:last-of-type > a:first-of-type > img {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .detail-report > div:first-of-type {
@@ -3201,6 +3258,10 @@ nav > div:last-of-type > a:first-of-type > img {
             letter-spacing: 0%;
             color: #0A5540;
 
+            p {
+                text-align: center;
+            }
+            
             p:last-of-type {
                 font-family: Public Sans;
                 font-weight: 600;
@@ -3260,20 +3321,17 @@ nav > div:last-of-type > a:first-of-type > img {
         border-radius: 14px;
 
         overflow: hidden;
-    
         
         > div:first-of-type {
             max-width: inherit;
-            max-height: 240px;
+            height: 75%;
             display: block;
             justify-content: center;
             align-items: center;
-            
-            overflow: hidden;
 
             > img {
                 width: 100%;
-                height: fit-content;
+                height: 100%;
                 object-fit: cover;
             }
 
@@ -3281,6 +3339,9 @@ nav > div:last-of-type > a:first-of-type > img {
 
         > div:last-of-type {
             padding: 12px;
+            height: 25%;
+            display: flex;
+            flex-direction: column;
 
             p {
                 padding: 0;
