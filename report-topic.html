@@ -130,72 +130,79 @@
                 </div>
             </div>
             <div class="rp-card">
-                <form class="rp-card-title">
+                <form class="rp-card-title" id="form-topic">
                     <div>
                         <p>Step 01 of 04</p>
                         <h2>What needs fixing?</h2>
                         <p>Select the municipal service category that best matches the issue observed.</p>
                     </div>
                     <div class="rp-card-category">
-                        <button type="button" value="road-transit">
+                        <label>
+                            <input type="radio" name="category" value="road-transit" required>
                             <div>
                                 <div><img src="assets/road-transit-icon.svg" alt="road-transit-icon">Road & Transit</div>
                                 <span>48h SLA</span>
                             </div>
                             <p>Pothole / Sidewalk (Trotoar)</p>
                             <p>Potholes, broken sidewalk slabs, damaged drainage grates</p>
-                        </button>
-                        <button type="button" value="water-sewage">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="water-sewage">
                             <div>
                                 <div><img src="assets/water-sewage-icon.svg" alt="water-sewage-icon">Water & Sewage</div>
                                 <span>24h SLA</span>
                             </div>
                             <p>Water Burst / Pipa Bocor</p>
                             <p>Pipeline bursts, flooding tap leaks, dry taps</p>
-                        </button>
-                        <button type="button" value="street-lighting">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="street-lighting">
                             <div>
                                 <div><img src="assets/street-lighting-icon.svg" alt="street-lighting-icon">Street Lighting</div>
                                 <span>72h SLA</span>
                             </div>
                             <p>Street Lighting</p>
                             <p>Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
-                        </button>
-                        <button type="button" value="sanitation-waste">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="sanitation-waste">
                             <div>
                                 <div><img src="assets/sanitation-waste-icon.svg" alt="sanitation-waste-icon">Sanitation & Waste</div>
                                 <span>36h SLA</span>
                             </div>
                             <p>Trash Pile / Sampah Liar</p>
                             <p>Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
-                        </button>
-                        <button type="button" value="park-trees">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="park-trees">
                             <div>
                                 <div><img src="assets/park-trees-icon.svg" alt="park-trees-icon">Public Parks & Trees</div>
                                 <span>48h SLA</span>
                             </div>
                             <p>Hazardous Tree / Rawan Tumbang</p>
                             <p>Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
-                        </button>
-                        <button type="button" value="noise-disturbance">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="noise-disturbance">
                             <div>
                                 <div><img src="assets/noise-disturbance-icon.svg" alt="noise-disturbance-icon">Noise & Disturbance</div>
                                 <span>48h SLA</span>
                             </div>
                             <p>Late-night Noise / Ketertiban</p>
                             <p>Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
-                        </button>
-                        <button type="button" value="building-zoning">
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="building-zoning">
                             <div>
                                 <div><img src="assets/building-zone-icon.svg" alt="building-zone-icon">Building & Zoning</div>
                                 <span>72h SLA</span>
                             </div>
                             <p>Unsafe Construction / Bangunan</p>
                             <p>Unsafe scaffolding, structural hazards, building boundary violations</p>
-                        </button>
+                        </label>
                     </div>
                     <div class="rp-card-option">
-                        <button class="btn-cancel">Cancel</button>
+                        <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Cancel</button>
                         <button class="btn btn-main-dark" type="submit">Continue <img src="assets/arrow-light.svg" alt="arrow-light"></button>
                     </div>
                 </form>
@@ -373,7 +380,31 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", updateAuthUI)
+        document.addEventListener("DOMContentLoaded", () => {
+            updateAuthUI()
+
+            const draft = JSON.parse(window.localStorage.getItem("reportDraft"))
+            if (draft && draft.category) {
+                const existingRadio = document.querySelector(`input[name="category"][value="${draft.category}"]`)
+                if (existingRadio) existingRadio.checked = true
+            }
+        })
+
+        const formTopic = document.getElementById("form-topic")
+        formTopic.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const selected = document.querySelector('input[name="category"]:checked')
+            if (!selected) {
+                alert("Pilih salah satu kategori terlebih dahulu!")
+                return
+            }
+
+            let draft = JSON.parse(window.localStorage.getItem("reportDraft")) || {}
+            draft.category = selected.value
+            window.localStorage.setItem("reportDraft", JSON.stringify(draft))
+
+            window.location.href = "report-location.html"
+        })
 
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")

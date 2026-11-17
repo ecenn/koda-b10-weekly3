@@ -1812,6 +1812,59 @@ nav > div:last-of-type > a:first-of-type > img {
     color: #84928A;
 }
 
+.rp-card-category > label {
+    background-color: #FFFDF8;
+    border: 1px solid #E8E0D1;
+    border-radius: 12px;
+    font-family: Public Sans;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.rp-card-category input[type="radio"] {
+    display: none;
+}
+.rp-card-category label:has(input[type="radio"]:checked) {
+    border-color: #0F6B4F;
+    background-color: #F4FBF7;
+}
+.rp-card-category > label > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+.rp-card-category > label > div:first-of-type > div:first-of-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.rp-card-category > label > div:first-of-type > span {
+    background-color: #E6F2EB;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 10px;
+    line-height: 16px;
+    color: #0A5540;
+}
+.rp-card-category > label > p {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+}
+.rp-card-category > label > p:nth-of-type(2) {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    color: #84928A;
+}
+
 .rp-card-option {
     display: flex;
     justify-content: space-between;
