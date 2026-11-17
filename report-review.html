@@ -373,6 +373,33 @@
 
         document.addEventListener("DOMContentLoaded", updateAuthUI)
 
+        const formReview = document.querySelector(".rp-card-title")
+        formReview.addEventListener("submit", (e) => {
+            e.preventDefault()
+            let draft = JSON.parse(localStorage.getItem("reportDraft")) || {}
+            
+            draft.title = document.getElementById("title").value
+            draft.details = document.getElementById("incident-details").value
+            draft.filer = document.getElementById("filer").value
+            draft.email = document.getElementById("email").value
+            draft.phone = document.getElementById("phone").value
+            
+            let allReports = JSON.parse(localStorage.getItem("allReports")) || []
+            let nextNum = allReports.length + 1
+            let formattedNum = String(nextNum).padStart(4, '0')
+            
+            draft.referenceCode = `CMP-2026-${formattedNum}`
+            draft.loggedTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            
+            allReports.push(draft)
+            localStorage.setItem("allReports", JSON.stringify(allReports))
+            localStorage.setItem("currentReceipt", JSON.stringify(draft))
+            
+            localStorage.removeItem("reportDraft")
+            
+            window.location.href = "report-receipt.html"
+        })
+
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")
 
