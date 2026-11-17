@@ -16,13 +16,13 @@
                 </a>
             </div>
             <div>
-                <ul>
+                <ul class="sidebar-links">
                     <li><a href="live-feed.html">Live Feed</a></li>
                     <li><a href="track.html">Track</a></li>
                     <li><a href="help.html">How it works</a></li>
                 </ul>
             </div>
-            <div>
+            <div id="sidebar-logged-out">
                 <button class="btn btn-signin" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
@@ -30,6 +30,23 @@
                 <button class="btn btn-report" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
+                </button>
+            </div>
+            <div id="sidebar-logged-in" style="display: none; flex-direction: column; gap: 10px;">
+                <a href="notification.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                    <img src="assets/notif-icon.svg" alt="notif-icon"> Notifications
+                </a>
+                <button class="btn btn-main-light user-btn" onclick="Logout()" title="Klik untuk keluar (Log out)">
+                    <div class="user-initials">DU</div>
+                    <div style="text-align: left;">
+                        <span class="user-name">Dummy User</span>
+                        <p style="margin: 0; font-size: 11px; color: #84928A;">Citizen</p>
+                    </div>
+                    <img src="assets/i-chevron-down.svg" alt="i-chevron-down">
+                </button>
+                <button class="btn btn-main-dark" onclick="window.location.href='./report.html'">
+                    <img src="assets/plus-light.svg" alt="plus-light-icon">
+                    Report an Issue
                 </button>
             </div>
         </nav>
@@ -41,13 +58,13 @@
                 </a>
             </div>
             <div class="hideMobile">
-                <ul>
+                <ul class="navbar-links">
                     <li><a href="live-feed.html">Live Feed</a></li>
                     <li class="nav-click"><a href="track.html">Track</a></li>
                     <li><a href="help.html">How it works</a></li>
                 </ul>
             </div>
-            <div>
+            <div id="nav-logged-out">
                 <button class="btn btn-signin hideMobile" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
@@ -55,6 +72,21 @@
                 <button class="btn btn-report hideMobile" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
+                </button>
+            </div>
+            <div id="nav-logged-in" class="hideMobile" style="display: none; align-items: center; gap: 10px;">
+                <a href="notification.html"><img src="assets/notif-icon.svg" alt="notif-icon"></a>
+                <button class="btn btn-main-light user-btn" onclick="Logout()" title="Klik untuk keluar (Log out)">
+                    <div class="user-initials">DU</div>
+                    <div style="text-align: left;">
+                        <span class="user-name">Dummy User</span>
+                        <p style="margin: 0; font-size: 11px; color: #84928A;">Citizen</p>
+                    </div>
+                    <img src="assets/i-chevron-down.svg" alt="i-chevron-down">
+                </button>
+                <button class="btn btn-main-dark" onclick="window.location.href='./report.html'">
+                    <img src="assets/plus-light.svg" alt="plus-light-icon">
+                    Report an Issue
                 </button>
             </div>
             <div onclick=showSidebar()>
@@ -100,7 +132,7 @@
                         <p>Reports filed anonymously can only be tracked using this unique key; officers cannot retrieve records by name without it.</p>
                     </div>
                 </div>
-                <div>
+                <div onclick="window.location.href='./detail-report.html'">
                     Lost your tracking ID? Search recent reports by location →
                 </div>
             </div>
@@ -159,14 +191,15 @@
                 <button class="btn btn-main-dark" onclick=Login()>Sign In Existing Account</button>
                 <button class="btn btn-main-light" onclick=Register()>Register as Citizen</button>
             </div>
-            <form action="#">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your Email">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
+            <form class="form-login">
+                <label for="email-login">Email Address</label>
+                <input type="email" name="email" id="email-login" placeholder="Enter your Email" required>
+                <label for="password-login">Password</label>
+                <input type="password" name="password" id="password-login" placeholder="Enter your password" required>
                 <button type="submit" class="btn btn-main-dark">Sign In <img src="assets/arrow-light.svg" alt="arrow-light-icon"></button>
             </form>
         </div>
+
         <div class="register">
             <div>
                 <div>
@@ -181,25 +214,25 @@
                 <button class="btn btn-main-light" onclick=Login()>Sign In Existing Account</button>
                 <button class="btn btn-main-dark" onclick=Register()>Register as Citizen</button>
             </div>
-            <form action="#">
+            <form class="form-register"> 
                 <label for="name">Full Name (Nama Lengkap) *</label>
-                <input type="text" id="name" placeholder="e.g. Budi Santoso">
+                <input type="text" name="name" id="name" placeholder="e.g. Budi Santoso" required>
                 <div>
                     <div>
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" placeholder="e.g. budi@wargareport.id">
+                        <input type="email" name="email" id="email" placeholder="e.g. budi@wargareport.id" required>
                     </div>
                     <div>
                         <label for="phone">Phone / WhatsApp *</label>
-                        <input type="number" id="phone" placeholder="+62 812-...">
+                        <input type="number" name="phone" id="phone" placeholder="+62 812-..." required>
                     </div>
                 </div>
-                <label for="email">NIK</label>
-                <input type="text" id="email" placeholder="16 digits for verified resident badge (e.g. 3174...)">
+                <label for="nik">NIK</label>
+                <input type="text" name="nik" id="nik" placeholder="16 digits for verified resident badge (e.g. 3174...)">
                 <span>Used exclusively for verification under UU PDP and never shown to the public.</span>
                 <label for="password">Password *</label>
-                <input type="text" id="password" placeholder="Create a password">
-                <button class="btn btn-main-dark"><img src="assets/checklist-icon.svg" alt="checklist-icon">Create Account & Continue</button>
+                <input type="password" name="password" id="password" placeholder="Create a password" required>
+                <button type="submit" class="btn btn-main-dark"><img src="assets/checklist-icon.svg" alt="checklist-icon">Create Account & Continue</button>
             </form>
         </div>
     </div>
@@ -212,6 +245,7 @@
             modal.style.display = "flex"
             login.style.display = "flex"
             register.style.display = "none"
+            hideSidebar()
         }
         function Register() {
             modal.style.display = "flex"
@@ -223,6 +257,99 @@
             register.style.display = "none"
             login.style.display = "none"
         }
+        function Logout() {
+            if (confirm("Apakah Anda ingin keluar (Log out)?")) {
+                window.localStorage.removeItem("currentUser")
+                window.alert("Berhasil keluar akun.")
+                window.location.reload()
+            }
+        }
+
+        function updateAuthUI() {
+            const currentUser = JSON.parse(window.localStorage.getItem("currentUser"))
+            const navLoggedOut = document.getElementById("nav-logged-out")
+            const navLoggedIn = document.getElementById("nav-logged-in")
+            const sidebarLoggedOut = document.getElementById("sidebar-logged-out")
+            const sidebarLoggedIn = document.getElementById("sidebar-logged-in")
+            const btnSnapReport = document.getElementById("btn-snap-report")
+
+            if (currentUser) {
+                if (navLoggedOut) navLoggedOut.style.display = "none"
+                if (navLoggedIn) navLoggedIn.style.display = "flex"
+                if (sidebarLoggedOut) sidebarLoggedOut.style.display = "none"
+                if (sidebarLoggedIn) sidebarLoggedIn.style.display = "flex"
+                if (btnSnapReport) btnSnapReport.setAttribute("onclick", "window.location.href='./report.html'")
+
+                const nameParts = currentUser.name.trim().split(" ")
+                const initials = nameParts.length > 1 
+                    ? (nameParts[0][0] + nameParts[1][0]).toUpperCase() 
+                    : nameParts[0].substring(0, 2).toUpperCase()
+
+                document.querySelectorAll(".user-initials").forEach(el => el.textContent = initials)
+                document.querySelectorAll(".user-name").forEach(el => el.textContent = currentUser.name)
+
+                const navLinks = document.querySelector(".navbar-links")
+                if (navLinks && !navLinks.querySelector('a[href="account-complaint.html"]')) {
+                    const li = document.createElement("li")
+                    li.innerHTML = '<a href="account-complaint.html">My Reports</a>'
+                    navLinks.appendChild(li)
+                }
+
+                const sideLinks = document.querySelector(".sidebar-links")
+                if (sideLinks && !sideLinks.querySelector('a[href="account-complaint.html"]')) {
+                    const li = document.createElement("li")
+                    li.innerHTML = '<a href="account-complaint.html">My Reports</a>'
+                    sideLinks.appendChild(li)
+                }
+            } else {
+                if (navLoggedOut) navLoggedOut.style.display = ""
+                if (navLoggedIn) navLoggedIn.style.display = "none"
+                if (sidebarLoggedOut) sidebarLoggedOut.style.display = ""
+                if (sidebarLoggedIn) sidebarLoggedIn.style.display = "none"
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", updateAuthUI)
+
+        const formLogin = document.querySelector(".form-login")
+        const formRegister = document.querySelector(".form-register")
+
+        formRegister.addEventListener("submit", (event)=>{
+            event.preventDefault()
+            const form = new FormData(formRegister)
+            const newData = Object.fromEntries(form.entries())
+
+            let existingUsers = JSON.parse(window.localStorage.getItem("savedAccounts")) || []
+            existingUsers.push(newData)
+
+            window.localStorage.setItem("savedAccounts", JSON.stringify(existingUsers))
+            window.alert("Akun baru berhasil dibuat")
+
+            formRegister.reset()
+            Login()
+        })
+
+        formLogin.addEventListener("submit", (event) => {
+            event.preventDefault()
+            const form = new FormData(formLogin)
+            const loginData = Object.fromEntries(form.entries())
+
+            let registeredUsers = JSON.parse(window.localStorage.getItem("savedAccounts")) || []
+
+            const checkedUser = registeredUsers.find(user => 
+                user.email == loginData["email"] && user.password == loginData["password"]
+            )
+
+            if (checkedUser) {
+                window.localStorage.setItem("currentUser", JSON.stringify(checkedUser))
+                window.alert("Login berhasil! Selamat datang kembali, " + checkedUser.name)
+                formLogin.reset()
+                hideModal()
+                updateAuthUI()
+            } else {
+                window.alert("Login gagal! Email atau password salah, atau akun belum terdaftar.")
+            }
+        })
     </script>
 </body>
 </html>

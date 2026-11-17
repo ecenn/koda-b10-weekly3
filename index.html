@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav class="sidebar">
-            <div onclick="hideSidebar()">
+            <div onclick=hideSidebar()>
                 <a>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#0F6B4F"><path d="M6.4,19L5,17.6L10.6,12L5,6.4L6.4,5L12,10.6L17.6,5L19,6.4L13.4,12L19,17.6L17.6,19L12,13.4L6.4,19Z"/></svg>
                 </a>
@@ -23,11 +23,11 @@
                 </ul>
             </div>
             <div id="sidebar-logged-out">
-                <button class="btn btn-signin" onclick="Login()">
+                <button class="btn btn-signin" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
                 </button>
-                <button class="btn btn-report" onclick="Login()">
+                <button class="btn btn-report" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
                 </button>
@@ -44,8 +44,9 @@
                     </div>
                     <img src="assets/i-chevron-down.svg" alt="i-chevron-down">
                 </button>
-                <button class="btn btn-main-dark" onclick="window.location.href='./report-topic.html'">
-                    <img src="assets/plus-light.svg" alt="plus-light-icon"> Report an Issue
+                <button class="btn btn-main-dark" onclick="window.location.href='./report.html'">
+                    <img src="assets/plus-light.svg" alt="plus-light-icon">
+                    Report an Issue
                 </button>
             </div>
         </nav>
@@ -64,11 +65,11 @@
                 </ul>
             </div>
             <div id="nav-logged-out">
-                <button class="btn btn-signin hideMobile" onclick="Login()">
+                <button class="btn btn-signin hideMobile" onclick=Login()>
                     <img src="assets/arrow-signin.svg" alt="arrow-signin-icon">
                     Sign In
                 </button>
-                <button class="btn btn-report hideMobile" onclick="Login()">
+                <button class="btn btn-report hideMobile" onclick=Login()>
                     <img src="assets/plus-light.svg" alt="plus-light-icon">
                     Report
                 </button>
@@ -83,11 +84,12 @@
                     </div>
                     <img src="assets/i-chevron-down.svg" alt="i-chevron-down">
                 </button>
-                <button class="btn btn-main-dark" onclick="window.location.href='./report-topic.html'">
-                    <img src="assets/plus-light.svg" alt="plus-light-icon"> Report an Issue
+                <button class="btn btn-main-dark" onclick="window.location.href='./report.html'">
+                    <img src="assets/plus-light.svg" alt="plus-light-icon">
+                    Report an Issue
                 </button>
             </div>
-            <div onclick="showSidebar()">
+            <div onclick=showSidebar()>
                 <a>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#0F6B4F"><path d="M3,18V16H21v2H3Zm0-5V11H21v2H3ZM3,8V6H21V8H3Z"/></svg>
                 </a>
@@ -110,7 +112,7 @@
             <h1>See something broken? Snap it. We push the city to fix it.</h1>
             <p>Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food delivery order, and keep authorities accountable.</p>
             <div>
-                <button class="btn btn-main-dark" id="btn-snap-report" onclick="Login()">
+                <button class="btn btn-main-dark" id="btn-snap-report" onclick=Login()>
                     <img src="assets/camera.svg" alt="camera-icon">
                     Snap a report
                     <img src="assets/arrow-light.svg" alt="arrow-light-icon">
@@ -121,9 +123,9 @@
             </div>
             <div class="stats">
                 <p><span style="color: #13231B;">48</span> reports today</p>
-                <p style="color: #84928A;">&centerdot;</p>
+                <p style="color: #84928A;">·</p>
                 <p><span style="color: #217A51;">194</span> fixed this week</p>
-                <p style="color: #84928A;">&centerdot;</p>
+                <p style="color: #84928A;">·</p>
                 <p><span style="color: #0F6B4F;">2.3 days</span> avg response</p>
             </div>
         </div>
@@ -303,7 +305,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 WargaReport. All rights reserved.</p>
+            <p>© 2026 WargaReport. All rights reserved.</p>
             <p>UU No. 25/2009 Compliant</p>
         </div>
     </footer>
@@ -312,15 +314,15 @@
             <div>
                 <div>
                     <h2>Sign In to WargaReport</h2>
-                    <button type="button" onclick="hideModal()">
+                    <button type="button" onclick=hideModal()>
                         <img src="assets/close-x-icon.svg" alt="close-x-icon">
                     </button>
                 </div>
                 <p>Sign in to lodge a complaint or upvote issues.</p>
             </div>
             <div>
-                <button class="btn btn-main-dark" onclick="Login()">Sign In Existing Account</button>
-                <button class="btn btn-main-light" onclick="Register()">Register as Citizen</button>
+                <button class="btn btn-main-dark" onclick=Login()>Sign In Existing Account</button>
+                <button class="btn btn-main-light" onclick=Register()>Register as Citizen</button>
             </div>
             <form class="form-login">
                 <label for="email-login">Email Address</label>
@@ -335,17 +337,17 @@
             <div>
                 <div>
                     <h2>Sign In to WargaReport</h2>
-                    <button type="button" onclick="hideModal()">
+                    <button type="button" onclick=hideModal()>
                         <img src="assets/close-x-icon.svg" alt="close-x-icon">
                     </button>
                 </div>
                 <p>Sign in to lodge a complaint or upvote issues.</p>
             </div>
             <div>
-                <button class="btn btn-main-light" onclick="Login()">Sign In Existing Account</button>
-                <button class="btn btn-main-dark" onclick="Register()">Register as Citizen</button>
+                <button class="btn btn-main-light" onclick=Login()>Sign In Existing Account</button>
+                <button class="btn btn-main-dark" onclick=Register()>Register as Citizen</button>
             </div>
-            <form class="form-register">
+            <form class="form-register"> 
                 <label for="name">Full Name (Nama Lengkap) *</label>
                 <input type="text" name="name" id="name" placeholder="e.g. Budi Santoso" required>
                 <div>
@@ -409,6 +411,7 @@
                 if (navLoggedIn) navLoggedIn.style.display = "flex"
                 if (sidebarLoggedOut) sidebarLoggedOut.style.display = "none"
                 if (sidebarLoggedIn) sidebarLoggedIn.style.display = "flex"
+                if (btnSnapReport) btnSnapReport.setAttribute("onclick", "window.location.href='./report.html'")
 
                 const nameParts = currentUser.name.trim().split(" ")
                 const initials = nameParts.length > 1 
@@ -419,18 +422,16 @@
                 document.querySelectorAll(".user-name").forEach(el => el.textContent = currentUser.name)
 
                 const navLinks = document.querySelector(".navbar-links")
-                if (navLinks && !navLinks.querySelector('a[href="citizen.html"]')) {
+                if (navLinks && !navLinks.querySelector('a[href="account-complaint.html"]')) {
                     const li = document.createElement("li")
-                    li.className = "nav-click"
-                    li.innerHTML = '<a href="citizen.html">My Reports</a>'
+                    li.innerHTML = '<a href="account-complaint.html">My Reports</a>'
                     navLinks.appendChild(li)
                 }
 
                 const sideLinks = document.querySelector(".sidebar-links")
-                if (sideLinks && !sideLinks.querySelector('a[href="citizen.html"]')) {
+                if (sideLinks && !sideLinks.querySelector('a[href="account-complaint.html"]')) {
                     const li = document.createElement("li")
-                    li.className = "nav-click"
-                    li.innerHTML = '<a href="citizen.html">My Reports</a>'
+                    li.innerHTML = '<a href="account-complaint.html">My Reports</a>'
                     sideLinks.appendChild(li)
                 }
             } else {
@@ -446,7 +447,7 @@
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")
 
-        formRegister.addEventListener("submit", (event) => {
+        formRegister.addEventListener("submit", (event)=>{
             event.preventDefault()
             const form = new FormData(formRegister)
             const newData = Object.fromEntries(form.entries())
