@@ -123,7 +123,7 @@
                 </ul>
             </div>
             <div class="account-profile">
-                <form action="#">
+                <form id="edit-profile">
                     <div class="account-profile-card">
                         <div>
                             <h2>Filer Identity & Preferences</h2>
@@ -139,22 +139,22 @@
                         </div>
                         <div>
                             <label class="rp-card-form-label" for="nama">Full Legal Name</label>
-                            <input class="answer-light user-name" type="text" name="nama" id="nama" placeholder="Dummy User">
+                            <input class="answer-light user-name" type="text" name="name" id="name" placeholder="Dummy User">
                         </div>
                         <div>
                             <label class="rp-card-form-label" for="email">Primary Notification Email</label>
-                            <input class="answer-light user-email" type="text" name="email" id="email" placeholder="dummyuser@wargareport.id">
+                            <input class="answer-light user-email" type="email" name="email" id="email" placeholder="dummyuser@wargareport.id">
                         </div>
                         <div>
                             <label class="rp-card-form-label" for="">SMS Contact Number</label>
-                            <input class="answer-light user-phone" type="text" name="email" id="email" placeholder="+62 812-3456-7890">
+                            <input class="answer-light user-phone" type="text" name="phone" id="phone" placeholder="+62 812-3456-7890">
                         </div>
                         <div>
                             <label class="rp-card-form-label" for="email">NIK</label>
-                            <input class="answer-light user-nik" type="text" name="email" id="email" placeholder="3175032103020005">
+                            <input class="answer-light user-nik" type="text" name="nik" id="nik" placeholder="3175032103020005">
                         </div>
                         <div>
-                            <button class="btn btn-main-dark" type="button">Save profile changes</button>
+                            <button class="btn btn-main-dark" type="submit">Save profile changes</button>
                         </div>
                     </div>
                 </form>
@@ -339,6 +339,22 @@
         }
 
         document.addEventListener("DOMContentLoaded", updateAuthUI)
+
+        const formEditProfile = document.querySelector("#edit-profile")
+        formEditProfile.addEventListener("submit", (event) => {
+            event.preventDefault()
+            
+            const form = new FormData(formEditProfile)
+            const newData = Object.fromEntries(form.entries())
+            const currentUser = JSON.parse(window.localStorage.getItem("currentUser"))
+            Object.assign(currentUser, newData)
+            
+            window.localStorage.setItem("currentUser", JSON.stringify(currentUser))
+            window.alert("Data berhasil diperbarui")
+
+            formEditProfile.reset()
+            window.location.reload()
+        })
 
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")
