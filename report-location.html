@@ -343,6 +343,16 @@
 
         document.addEventListener("DOMContentLoaded", updateAuthUI)
 
+        const formLocation = document.querySelector(".rp-card-title")
+        formLocation.addEventListener("submit", (e) => {
+            e.preventDefault()
+            let draft = JSON.parse(localStorage.getItem("reportDraft")) || {}
+            draft.area = document.getElementById("area").value
+            draft.street = document.getElementById("street").value
+            localStorage.setItem("reportDraft", JSON.stringify(draft))
+            window.location.href = "report-proof.html"
+        })
+
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")
 
