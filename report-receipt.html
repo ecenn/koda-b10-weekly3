@@ -312,7 +312,25 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", updateAuthUI)
+        document.addEventListener("DOMContentLoaded", () => {
+            updateAuthUI()
+
+            const receiptData = JSON.parse(localStorage.getItem("currentReceipt"))
+            
+            if (receiptData) {
+                const refElement = document.querySelector(".rp-card-receipt h1")
+                if (refElement) refElement.textContent = receiptData.referenceCode
+                
+                const descParagraphs = document.querySelectorAll(".rp-card-receipt > div:nth-of-type(3) p")
+                if (descParagraphs.length >= 2) {
+                    descParagraphs[0].textContent = receiptData.title
+                    descParagraphs[1].textContent = `Dinas Terkait · ${receiptData.street}`
+                }
+                
+                const timeDiv = document.querySelector(".rp-card-receipt > div:first-of-type > div:last-of-type")
+                if (timeDiv) timeDiv.textContent = `Logged ${receiptData.loggedTime}`
+            }
+        })
 
         const formLogin = document.querySelector(".form-login")
         const formRegister = document.querySelector(".form-register")
